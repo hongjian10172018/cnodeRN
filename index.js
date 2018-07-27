@@ -1,5 +1,5 @@
 import { AppRegistry } from "react-native";
 import App from "./App";
 
-// console.disableYellowBox = true;
+console.disableYellowBox = true;
 AppRegistry.registerComponent("Cnode3", () => App);
