@@ -19,8 +19,8 @@ export default class My extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: null, //用户信息
-      msg: null //消息
+      user: "", //用户信息
+      msg: "" //消息
     };
   }
   componentDidMount() {

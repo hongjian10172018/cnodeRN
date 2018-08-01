@@ -13,6 +13,7 @@ import {
 import { withNavigation } from "react-navigation";
 import { publishTopic } from "../utils/api";
 import pxtodp from "../utils/pxtodp";
+import color from "../utils/color";
 
 class Publish extends React.Component {
   static navigationOptions = {
@@ -102,6 +103,7 @@ class Publish extends React.Component {
             style={styles.title}
             onChangeText={val => this.setState({ title: val })}
             value={this.state.title}
+            underlineColorAndroid="transparent"
           />
         </View>
         <View style={styles.box}>
@@ -112,6 +114,7 @@ class Publish extends React.Component {
             multiline={true}
             numberOfLines={10}
             placeholder="请输入帖子内容"
+            underlineColorAndroid="transparent"
           />
         </View>
         <Button onPress={this.publishHandler} title="发布帖子" />
@@ -130,7 +133,9 @@ const styles = StyleSheet.create({
     flexShrink: 1,
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: pxtodp(10)
+    marginBottom: pxtodp(10),
+    borderBottomWidth: 1,
+    borderColor: color.border
   },
   label: {
     fontSize: pxtodp(12),
@@ -140,10 +145,12 @@ const styles = StyleSheet.create({
     flex: 1
   },
   title: {
-    flex: 1
+    flex: 1,
+    paddingVertical: 10
   },
   content: {
-    width: "100%",
+    flex: 1,
+    height: 200,
     textAlignVertical: "top"
   }
 });

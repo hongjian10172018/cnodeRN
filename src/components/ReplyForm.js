@@ -35,6 +35,11 @@ class ReplyForm extends Component {
     const Form = this.state.show ? (
       <View>
         <TextInput
+          style={{
+            backgroundColor: color.white,
+            textAlignVertical: "top",
+            height: 150
+          }}
           multiline={true}
           maxLength={200}
           placeholder="最多可回复200个字符"
@@ -43,7 +48,7 @@ class ReplyForm extends Component {
           onChangeText={text => {
             this.setState({ content: text });
           }}
-          style={{ backgroundColor: color.white, textAlignVertical: "top" }}
+          underlineColorAndroid="transparent"
         />
         <View style={{ padding: 10 }}>
           <Button title="提交" onPress={this.submitReply} />
