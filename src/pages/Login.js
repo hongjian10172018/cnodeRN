@@ -57,7 +57,7 @@ class Login extends React.Component {
           style={styles.token}
           onChangeText={accesstoken => this.setState({ accesstoken })}
           value={this.state.accesstoken}
-          placeholder="请输入AccessToken进行登录"
+          placeholder="登录cnodejs.org后，在设置页找到accesstoken输入"
         />
         <Button title="登录" onPress={this.loginlHandler} />
       </View>
